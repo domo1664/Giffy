@@ -4,11 +4,15 @@
   "description": "This is a Giphy clone using the Giphy api",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/domo1664/Giffy.git"
+  },
+  "engines":{
+    "node":"6.6.0"
   },
   "author": "",
   "license": "ISC",
