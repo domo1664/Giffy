@@ -3,7 +3,7 @@ This is a Giphy clone using the Giphy api
 
 ---
 ### HEROKU URL
-https://giffy-dom.herokuapp.com/
+https://giffy-dom.herokuapp.com/   
 
 ---
 ### WIREFRAMES
