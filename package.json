@@ -1,0 +1,27 @@
+{
+  "name": "giffy",
+  "version": "1.0.0",
+  "description": "This is a Giphy clone using the Giphy api",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/domo1664/Giffy.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/domo1664/Giffy/issues"
+  },
+  "homepage": "https://github.com/domo1664/Giffy#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "method-override": "^2.3.7",
+    "mustache-express": "^1.2.4",
+    "node-fetch": "^1.6.3",
+    "pg-promise": "^5.4.4"
+  }
+}
