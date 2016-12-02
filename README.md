@@ -4,9 +4,9 @@ This is a Giphy clone using the Giphy api
 ---
 
 ### Wireframes
-![WF1](wireframes/wireframe1.jpg?raw=true)
+![WF1](/wireframes/wireframe1.jpg?raw=true)
 
-![WF2](wireframes/wireframe2.jpg?raw=true)
+![WF2](/wireframes/wireframe2.jpg?raw=true)
 
 ---
 
