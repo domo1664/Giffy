@@ -54,7 +54,7 @@ var exp = require('express');
     var on = false;
     app.get('/', function(req,res){
 
-      if(on === true){
+      if(on == true){
 
         fetch(theQuery)
         .then(function(data){
@@ -68,7 +68,7 @@ var exp = require('express');
 
       }
 
-      if (on === false){
+      if (on == false){
 
         fetch('http://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC&limit=27')
         .then(function(data){
@@ -94,15 +94,6 @@ var exp = require('express');
           });
         });
 
-        fetch('http://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC&limit=27')
-        .then(function(data){
-          return data.json();
-        })
-        .then(function(data){
-          res.render('index', {
-            data: data.data
-          });
-        })
       }
 
     });
@@ -113,6 +104,7 @@ var exp = require('express');
       .then(function(data){
         var favs = {'favs': data};
         res.render('fav', favs);
+        on = false;
       })
 
     });
