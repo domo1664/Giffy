@@ -16,6 +16,7 @@ var exp = require('express');
     app.use(bdyParser.urlencoded({extended:false}));
     app.use(bdyParser.json());
 
+    //Create variable that stores user input from post route
     var theQuery;
     app.post('/tempor', function(req, res){
 
@@ -24,6 +25,9 @@ var exp = require('express');
 
     });
 
+    //Create variable that stores image url from API when user clicks on image on
+    //home page. Post's the url using client side ajax and added to DB
+    //using pg-promise.
     var img_url;
     app.post('/tempora', function(req,res){
 
@@ -32,6 +36,9 @@ var exp = require('express');
 
     });
 
+    //Create variable that stores image url from DB when user clicks on image on
+    //favs page. Post's the url using client side ajax and deleted from DB using
+    //pg-promise.
     var del_pic;
     app.post('/temporar', function(req,res){
 
@@ -41,6 +48,9 @@ var exp = require('express');
 
     });
 
+    //Create variable that stores image url and id from DB when user clicks on image
+    //on favs page. Post's the url and id using client side ajax and inserting into
+    //DB using pg-promise.
     var fav_url;
     var fav_id;
     app.post('/temporary', function(req,res){
@@ -51,9 +61,11 @@ var exp = require('express');
 
     });
 
+    //Loads the home page with trending gifs on first loads and loads gifs
+    //related to user input using theQuery variable.
     var on = false;
     app.get('/', function(req,res){
-
+      //second load
       if(on == true){
 
         fetch(theQuery)
@@ -67,7 +79,7 @@ var exp = require('express');
         });
 
       }
-
+      //first load
       if (on == false){
 
         fetch('http://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC&limit=27')
@@ -81,7 +93,7 @@ var exp = require('express');
         })
         on = true;
       }
-
+      //If it breaks somehow
       else{
 
         fetch(theQuery)
@@ -98,6 +110,7 @@ var exp = require('express');
 
     });
 
+    //loads favorites page and grabs info from DB and renders it on the page
     app.get('/favs', function(req,res){
 
       db.any('SELECT DISTINCT id,url FROM gifs')
@@ -109,6 +122,7 @@ var exp = require('express');
 
     });
 
+    //loads PORT for local host
     app.listen(PORT, function(){
       console.log('Sup Server!');
     });
