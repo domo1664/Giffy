@@ -1,16 +1,19 @@
-# Giffy
+### GIFFY
 This is a Giphy clone using the Giphy api
 
 ---
+### HEROKU URL
+https://giffy-dom.herokuapp.com/
 
-### Wireframes
+---
+### WIREFRAMES
 ![WF1](/wireframes/wireframe1.JPG?raw=true)
 
 ![WF2](/wireframes/wireframe2.JPG?raw=true)
 
 ---
 
-### Techniques
+### TECH
 I used npm fetch to grab the urls in my express routes and pg promise to process the data
 on that url. I also used forms on the client side to communicate with the server side by 
 passing data from the form through ajax to a virtual page that the user never sees. This allowed
