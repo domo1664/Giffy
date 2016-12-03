@@ -21,7 +21,7 @@ var exp = require('express');
     app.post('/tempor', function(req, res){
 
       theQuery = 'http://api.giphy.com/v1/gifs/search?q=' + req.body.data +
-                   '&api_key=dc6zaTOxFJmzC&limit=27';
+                 '&api_key=dc6zaTOxFJmzC&limit=27';
 
     });
 
@@ -65,6 +65,7 @@ var exp = require('express');
     //related to user input using theQuery variable.
     var on = false;
     app.get('/', function(req,res){
+
       //second load
       if(on == true){
 
@@ -79,6 +80,7 @@ var exp = require('express');
         });
 
       }
+
       //first load
       if (on == false){
 
@@ -92,7 +94,9 @@ var exp = require('express');
           });
         })
         on = true;
+
       }
+
       //If it breaks somehow
       else{
 
@@ -105,6 +109,7 @@ var exp = require('express');
             data: data.data
           });
         });
+
       }
 
     });
@@ -123,7 +128,9 @@ var exp = require('express');
 
     //loads PORT for local host
     app.listen(PORT, function(){
+
       console.log('Sup Server!');
+
     });
 
 
