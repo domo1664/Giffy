@@ -106,7 +106,7 @@ input[type=text]{
   color: #66717E;
   border-radius: 4vw;
   position: fixed;
-  margin-top: 23.5%;
+  margin-top: 15.5%;
   padding: 1vw;
   transition: all 0.5s linear;
 }
@@ -172,7 +172,7 @@ input[type=text]{
   color: #66717E;
   border-radius: 4vw;
   position: fixed;
-  margin-top: 33%;
+  margin-top: 25%;
   padding: 1vw;
   transition: all 0.5s linear;
 }

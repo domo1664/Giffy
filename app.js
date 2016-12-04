@@ -117,7 +117,7 @@ var exp = require('express');
     //loads favorites page and grabs info from DB and renders it on the page
     app.get('/favs', function(req,res){
 
-      db.any('SELECT DISTINCT id,url FROM gifs')
+      db.any('SELECT DISTINCT url,id FROM gifs')
       .then(function(data){
         var favs = {'favs': data};
         res.render('fav', favs);
